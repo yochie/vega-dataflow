@@ -18,7 +18,8 @@ import {id, logger, Error} from 'vega-util';
  */
 export default function Dataflow() {
   this._log = logger();
-  this._logLevel(Error);
+  this.logLevel = logMethod( 'level' );
+  this.logLevel(Error);
 
   this._clock = 0;
   this._rank = 0;
